@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import SocialMedia from '@/components/SocialMedia';
 import Footer from '@/components/Footer';
-import { ArrowLeft, MapPin, Calendar, User, Square, Clock, ArrowRight, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import { ArrowLeft, MapPin, Calendar, User, Square, Clock, ArrowRight, ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
 import { projectsApi, type Project } from '@/lib/supabase';
 
 export default function ProjectDetail() {
