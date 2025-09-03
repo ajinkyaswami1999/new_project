@@ -9,7 +9,8 @@ const defaultSocialLinks = {
   instagram: 'https://instagram.com/26asdesign',
   twitter: 'https://twitter.com/26asdesign',
   youtube: 'https://youtube.com/@26asdesign',
-  behance: 'https://behance.net/26asdesign'
+  behance: 'https://behance.net/26asdesign',
+  linkedin: 'https://linkedin.com/company/26asdesign'
 };
 
 export default function SocialMedia() {
@@ -22,12 +23,7 @@ export default function SocialMedia() {
   const loadSocialLinks = async () => {
     if (!supabase) {
       // Use fallback data when Supabase is not configured
-      setSocialLinks({
-        instagram: 'https://instagram.com/26asdesign',
-        facebook: 'https://facebook.com/26asdesign',
-        linkedin: 'https://linkedin.com/company/26asdesign',
-        twitter: 'https://twitter.com/26asdesign'
-      });
+      setSocialLinks(defaultSocialLinks);
       return;
     }
 
@@ -81,6 +77,22 @@ export default function SocialMedia() {
       ),
       url: socialLinks.behance,
       color: 'hover:text-blue-500'
+    },
+    {
+      name: 'LinkedIn',
+      icon: () => (
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.82v2.16h.05c.53-1 1.82-2.16 3.75-2.16 4.01 0 4.75 2.64 4.75 6.07V24h-4v-8.39c0-2-.04-4.57-2.78-4.57-2.78 0-3.2 2.17-3.2 4.42V24h-4V8z"/>
+        </svg>
+      ),
+      url: socialLinks.linkedin,
+      color: 'hover:text-blue-700'
     }
   ];
 
